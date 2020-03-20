@@ -55,5 +55,18 @@ class Room:
             return self.w_to
         else:
             return None
+
+    def relationships(self, room):
+        if room == self.get_room_in_direction("n"):
+            return "n"
+        if room == self.get_room_in_direction("s"):
+            return "s"
+        if room == self.get_room_in_direction("e"):
+            return "e"
+        if room == self.get_room_in_direction("w"):
+            return "w"
+
+        return None
+
     def get_coords(self):
         return [self.x, self.y]
